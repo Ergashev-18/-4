@@ -1,0 +1,12 @@
+.background__content{
+background-image: url("/images/grup.png"),url("/images/black1.png"),url("/images/black1.png");
+background-repeat: no-repeat, no-repeat, no-repeat;
+background-position: 120px 3px, 10% 100%, bottom 213px right 0px, bottom 120% right 120%, bottom 120% right 120%;
+width: 1440px;
+height: 654px;
+}
+.background__content__img{
+    position: absolute;
+    top: 25px;
+    left: 245px;
+}

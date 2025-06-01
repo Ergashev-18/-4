@@ -1,0 +1,35 @@
+.caption__title__laed {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center
+}
+
+.caption__img {
+    width: 58;
+    height: 44;
+}
+
+.caption__pic {
+    display: block;
+    margin: auto;
+}
+
+.caption__subtitle {
+    text-align: center;
+}
+
+.caption__subtitle__1 {
+    margin: 3px;
+}
+
+.caption__subtitle__laed {
+    margin: 3px;
+    color: #707070;
+}
+.caption__content{
+    font-family: 'inter';
+    position: relative;
+    margin-top: 120px;
+    margin-bottom: 65px;
+}
