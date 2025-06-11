@@ -1,0 +1,36 @@
+.section__CTA {
+ 
+    background-color: black;
+
+}
+
+.CTA__chertovna {
+    display: grid;
+    grid-template-columns: auto 750px;
+
+
+}
+
+.CTA__tile {
+    font-family: 'inter';
+    width: 100%;
+    display: flex;
+    padding-left: 140px;
+    padding-top: 120px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.CTA__subtitle {
+    color: #fff;
+    font-weight: 700;
+    font-size: 56px;
+    padding-top: 1px;
+}
+
+.CTA__button {
+    padding: 14px 37.5px;
+    background-color: #3d1edd;
+    cursor: pointer;
+    border: 1px solid #3d1edd;
+    color: #fff;
+}

@@ -1,0 +1,36 @@
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 25px 120px;
+}
+.header__nav{
+    box-sizing: border-box;
+    margin-left: auto;
+}
+.header__list{
+    list-style: none;
+    display: flex;
+    column-gap: 16px;
+    padding-left: 0;
+    margin-left: auto;
+}
+.header__recruiters{
+    padding: 14px 20px;
+    background-color: initial;
+    cursor: pointer;
+    border: 0px;
+}
+.header__login{
+    padding: 14px 43px;
+    background-color: initial;
+    cursor: pointer;
+    border: 1px solid #e5defd; 
+}
+.header__signup{
+    padding: 14px 49.5px;
+    background-color: #3d1edd;
+    cursor: pointer;
+    border: 1px solid #3d1edd; 
+    color: #ffffff;
+}
