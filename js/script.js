@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function generateCard({ icon, title, subtitle }) {
     return `
       <a class="about__item" href="#">
-        <img class="about__icon" src="${icon}" alt="${title}">
         <h3 class="about__title">${title}</h3>
         <p class="about__subtitle">${subtitle}</p>
       </a>
@@ -116,35 +115,69 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById('modal');
-  const openModalBtns = document.querySelectorAll('[data-modal="open"]');
-  const closeModalBtn = modal.querySelector('.modal__button--cancel');
-  const overlay = modal.querySelector('.modal__overlay');
-  const form = modal.querySelector('#modalForm');
+  // Логин модальное окно
+  const loginModal = document.getElementById('modal');
+  const openLoginBtns = document.querySelectorAll('[data-modal="open"]');
+  const closeLoginBtn = loginModal.querySelector('.modal__button--cancel');
+  const overlayLogin = loginModal.querySelector('.modal__overlay');
+  const formLogin = loginModal.querySelector('#modalForm');
 
- 
-  function showModal() {
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; 
+  // Регистрация модальное окно
+  const signupModal = document.getElementById('signupModal');
+  const openSignupBtns = document.querySelectorAll('[data-modal="open-signup"]');
+  const closeSignupBtn = signupModal.querySelector('.modal__button--cancel');
+  const overlaySignup = signupModal.querySelector('.modal__overlay');
+  const formSignup = signupModal.querySelector('#signupForm');
+
+
+  // Функции для показа/скрытия окон
+  function showLoginModal() {
+    loginModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
   }
 
-  function hideModal() {
-    modal.style.display = 'none';
-    document.body.style.overflow = ''; 
+  function hideLoginModal() {
+    loginModal.style.display = 'none';
+    document.body.style.overflow = '';
   }
 
-  openModalBtns.forEach(btn => {
-    btn.addEventListener('click', showModal);
+  function showSignupModal() {
+    signupModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function hideSignupModal() {
+    signupModal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  // Обработчики событий для Login
+  openLoginBtns.forEach(btn => {
+    btn.addEventListener('click', showLoginModal);
   });
 
-  closeModalBtn.addEventListener('click', hideModal);
+  closeLoginBtn.addEventListener('click', hideLoginModal);
+  overlayLogin.addEventListener('click', hideLoginModal);
 
-  overlay.addEventListener('click', hideModal);
-
-  form.addEventListener('submit', (e) => {
+  formLogin.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Форма отправлена!');
-    hideModal();
+    alert('Форма входа отправлена!');
+    hideLoginModal();
+  });
+
+
+  // Обработчики событий для Sign Up
+  openSignupBtns.forEach(btn => {
+    btn.addEventListener('click', showSignupModal);
+  });
+
+  closeSignupBtn.addEventListener('click', hideSignupModal);
+  overlaySignup.addEventListener('click', hideSignupModal);
+
+  formSignup.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Форма регистрации отправлена!');
+    hideSignupModal();
   });
 });
 document.addEventListener("DOMContentLoaded", () => {

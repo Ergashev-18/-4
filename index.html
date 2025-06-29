@@ -18,7 +18,7 @@
             <nav class="header__nav">
                 <ul class="header__list">
                     <button class="header__recruiters" type="button">For Recruiters</button>
-                    <button class="header__signup">Sign Up</button>
+                    <button class="header__signup" data-modal="open-signup">Sign Up</button>
                     <button class="header__login" data-modal="open">Log in</button>
                 </ul>
 
@@ -217,11 +217,27 @@
   <div class="modal__overlay"></div>
   <div class="modal__window">
     <form class="modal__form" id="modalForm">
-      <h2 class="modal__title">Регистрация</h2>
+      <h2 class="modal__title">Войти</h2>
       <input class="modal__input" type="text" name="name" placeholder="Имя" required>
       <input class="modal__input" type="email" name="email" placeholder="Email" required>
       <div class="modal__buttons">
         <button class="modal__button" type="submit">OK</button>
+        <button class="modal__button modal__button--cancel" type="button">Отмена</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Модальное окно для Sign Up -->
+<div class="modal" id="signupModal">
+  <div class="modal__overlay"></div>
+  <div class="modal__window">
+    <form class="modal__form" id="signupForm">
+      <h2 class="modal__title">Зарегистрироваться</h2>
+      <input class="modal__input" type="text" name="name" placeholder="Имя" required>
+      <input class="modal__input" type="email" name="email" placeholder="Email" required>
+      <input class="modal__input" type="password" name="password" placeholder="Пароль" required>
+      <div class="modal__buttons">
+        <button class="modal__button" type="submit">Зарегистрироваться</button>
         <button class="modal__button modal__button--cancel" type="button">Отмена</button>
       </div>
     </form>
